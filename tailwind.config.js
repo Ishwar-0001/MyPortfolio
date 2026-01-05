@@ -25,4 +25,23 @@ module.exports = {
     },
   },
   plugins: [],
+  extend: {
+  animation: {
+    "float-slow": "float 8s ease-in-out infinite",
+    "float-medium": "float 5s ease-in-out infinite",
+    "float-fast": "float 3s ease-in-out infinite",
+    scanline: "scan 6s linear infinite",
+  },
+  keyframes: {
+    float: {
+      "0%, 100%": { transform: "translateY(-10px)" },
+      "50%": { transform: "translateY(10px)" },
+    },
+    scan: {
+      "0%": { transform: "translateY(-100%)" },
+      "100%": { transform: "translateY(100%)" },
+    },
+  },
+},
+
 }
